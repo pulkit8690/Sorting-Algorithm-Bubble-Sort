@@ -12,44 +12,8 @@ Here's the step-by-step explanation of the bubble sort algorithm:
 6. Continue these iterations until the entire list is sorted.
 
 
-To illustrate the process, let's consider an array: [1, 10, 7, 6, 14, 9]. We'll apply the bubble sort algorithm to this array.
+The time complexity of the bubble sort algorithm is O(n^2), where n is the size of the array. This means that the time it takes to sort the array increases quadratically with the number of elements. In the worst case, where the array is sorted in reverse order, bubble sort needs to make (n-1) passes and perform (n-1), (n-2), (n-3), ..., 1 comparisons in each pass, resulting in a total of (n-1) + (n-2) + (n-3) + ... + 1 = n(n-1)/2 comparisons. Since the time complexity focuses on the dominant term, the O(n^2) notation is used.
 
-Round 1:
+The space complexity of bubble sort is O(1), which means it uses a constant amount of additional space. Bubble sort only requires a few variables for swapping elements and keeping track of the sorting process. The amount of memory used does not increase with the size of the input array.
 
-Compare 1 with 10. Since 1 is smaller, swap them. Array: [1, 10, 7, 6, 14, 9] -> [1, 7, 10, 6, 14, 9]
-Compare 10 with 7. Since 10 is greater, no swap needed.
-Compare 7 with 6. Since 7 is greater, swap them. Array: [1, 7, 10, 6, 14, 9] -> [1, 6, 10, 7, 14, 9]
-Compare 10 with 7. Since 10 is greater, no swap needed.
-Compare 7 with 14. Since 7 is smaller, no swap needed.
-Compare 14 with 9. Since 14 is greater, swap them. Array: [1, 6, 10, 7, 14, 9] -> [1, 6, 10, 7, 9, 14]
-After the first round, the largest element (14) is in its correct position at the end of the array.
-
-Round 2:
-
-Compare 1 with 6. Since 1 is smaller, no swap needed.
-Compare 6 with 10. Since 6 is smaller, no swap needed.
-Compare 10 with 7. Since 10 is greater, swap them. Array: [1, 6, 10, 7, 9, 14] -> [1, 6, 7, 10, 9, 14]
-Compare 10 with 9. Since 10 is greater, no swap needed.
-Compare 9 with 14. Since 9 is smaller, no swap needed.
-After the second round, the second largest element (10) is in its correct position.
-
-Round 3:
-
-Compare 1 with 6. Since 1 is smaller, no swap needed.
-Compare 6 with 7. Since 6 is smaller, no swap needed.
-Compare 7 with 10. Since 7 is smaller, no swap needed.
-Compare 10 with 9. Since 10 is greater, swap them. Array: [1, 6, 7, 10, 9, 14] -> [1, 6, 7, 9, 10, 14]
-After the third round, the third largest element (9) is in its correct position.
-
-Round 4:
-
-Compare 1 with 6. Since 1 is smaller, no swap needed.
-Compare 6 with 7. Since 6 is smaller, no swap needed.
-Compare 7 with 9. Since 7 is smaller, no swap needed.
-Compare 9 with 10. Since 9 is smaller, no swap needed.
-After the fourth round, the fourth largest element (7) is in its correct position.
-
-Round 5:
-
-Compare 1 with 6. Since 1 is smaller, no swap needed.
-Compare 6 with 7..
+It's worth noting that bubble sort is not considered an efficient sorting algorithm for large datasets due to its quadratic time complexity. There are other sorting algorithms, such as quicksort or mergesort, that offer better average and worst-case time complexities.
